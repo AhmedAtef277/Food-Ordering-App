@@ -13,7 +13,7 @@ class ApiServices{
     static let shared = ApiServices()
     private init(){}
     
-    func getAllDishes(url : String , completion : @escaping ((AllDishes? , Error?) ->Void)) -> Void{
+    func getAllDishes(url : String , completion :  @escaping ((AllDishes? , Error?) ->Void)) -> Void{
 //        AF.request(url , method: .get).responseString { response in
 //            guard let data = response.data else {return}
 //
