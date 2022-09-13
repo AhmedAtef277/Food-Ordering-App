@@ -37,25 +37,27 @@ class ApiServices{
     }
     
     func palceOrder(url : String , name : String , completion : @escaping ((PlaceOrderResponse? , Error?)->Void)){
-        let parameters = ["name" : name]
-        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseString { response in
-            switch response.result{
-            case .success(let value):
-                guard let data = response.data else{return}
-                do{
-                    let placeOrderResponse = try JSONDecoder().decode(PlaceOrderResponse.self, from: data)
-                    print(placeOrderResponse)
-                    completion(placeOrderResponse, nil)
-                }catch let error{
-                    print("error is \(error)")
-                    completion(nil,error)
-                }
-                print("value is \(value)")
-            case.failure(let error):
-                print("error is \(error)")
-                completion(nil,error)
-            }
-        }
+        let params = ["name" : name]
+        createRequest(url: url, method: .post, completion: completion , parameters: params)
+
+//        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseString { response in
+//            switch response.result{
+//            case .success(let value):
+//                guard let data = response.data else{return}
+//                do{
+//                    let placeOrderResponse = try JSONDecoder().decode(PlaceOrderResponse.self, from: data)
+//                    print(placeOrderResponse)
+//                    completion(placeOrderResponse, nil)
+//                }catch let error{
+//                    print("error is \(error)")
+//                    completion(nil,error)
+//                }
+//                print("value is \(value)")
+//            case.failure(let error):
+//                print("error is \(error)")
+//                completion(nil,error)
+//            }
+//        }
         
 
         
