@@ -11,10 +11,10 @@ class OnboardingViewController: UIViewController {
     
     static let identifier = String(describing: OnboardingViewController.self)
     
-    @IBOutlet weak var slideCollectionView: UICollectionView!
+    @IBOutlet private weak var slideCollectionView: UICollectionView!
     
-    @IBOutlet weak var pageControl: UIPageControl!
-    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet private weak var pageControl: UIPageControl!
+    @IBOutlet private weak var nextButton: UIButton!
     
     var slides : [OnboardingSlide] = []
     //    var currentPage = 0 {

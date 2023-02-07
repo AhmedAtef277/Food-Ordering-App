@@ -11,9 +11,9 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "OnboardingCollectionViewCell"
     
-    @IBOutlet weak var slideImageView: UIImageView!
-    @IBOutlet weak var slideTitle: UILabel!
-    @IBOutlet weak var slideDescreption: UILabel!
+    @IBOutlet private weak var slideImageView: UIImageView!
+    @IBOutlet private weak var slideTitle: UILabel!
+    @IBOutlet private weak var slideDescreption: UILabel!
     
     
     

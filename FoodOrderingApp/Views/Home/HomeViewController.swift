@@ -13,28 +13,27 @@ class HomeViewController: UIViewController {
     static let identifier = String(describing: HomeViewController.self)
     
     
-    @IBOutlet weak var categoryCollectionView: UICollectionView!
-    @IBOutlet weak var popularCollectionView: UICollectionView!
-    @IBOutlet weak var specialCollectionView: UICollectionView!
+    @IBOutlet private weak var categoryCollectionView: UICollectionView!
+    @IBOutlet private weak var popularCollectionView: UICollectionView!
+    @IBOutlet private weak var specialCollectionView: UICollectionView!
     
-    var category : [DishCategory] = []
-    var popular : [Dish] = []
-    var special : [Dish] = []
+    private var category : [DishCategory] = []
+    private var popular : [Dish] = []
+    private var special : [Dish] = []
+     var fetchAllDishesRepository : FetchAllDishesRepository!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        fetchAllDishesRepository = FetchAllDishesRepository()
+
         registerCells()
         ProgressHUD.show()
         setupProgressHudUi()
         fetchAllDishes()
-        print("test")
-        
-        
     }
     
     private func fetchAllDishes(){
-        ApiServices.shared.getAllDishes(url: "\(Route.baseUrl)/dish-categories") {[weak self] data, error in
+        fetchAllDishesRepository.getAllDishes {[weak self] data, error in
             if let error = error {
                 print(error)
             }else{
@@ -129,6 +128,8 @@ extension HomeViewController : UICollectionViewDelegate {
         if collectionView == categoryCollectionView {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: DishListViewController.identifier) as! DishListViewController
+            
+            
             controller.category = category[indexPath.row]
             
             navigationController?.pushViewController(controller, animated: true)

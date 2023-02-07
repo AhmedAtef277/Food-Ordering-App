@@ -11,15 +11,14 @@ import ProgressHUD
 class DishListViewController: UIViewController {
     static let identifier = String(describing: DishListViewController.self)
     var category : DishCategory!
+    var dishesServices : DishesRepositories!
     
-    @IBOutlet weak var listDishesTableView: UITableView!
+    @IBOutlet private weak var listDishesTableView: UITableView!
     var dishesList : [Dish] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        dishesServices = DishesRepositories()
         title = category.title
-        
-        
         register()
         fetchCategoriesDishes()
     }
@@ -29,7 +28,7 @@ class DishListViewController: UIViewController {
     }
     private func fetchCategoriesDishes(){
         ProgressHUD.show()
-        ApiServices.shared.fetchCategoriesDishes(url:  "\(Route.baseUrl)/dishes/\(category?.id ?? "")") { [weak self] dishes, error in
+        dishesServices.fetchCategoriesDishes(categoryId: category.id ?? "") { [weak self] dishes, error in
             self?.dishesList = dishes?.data ?? []
             ProgressHUD.dismiss()
             
@@ -38,7 +37,6 @@ class DishListViewController: UIViewController {
             }
         }
     }
-    
     
 }
 

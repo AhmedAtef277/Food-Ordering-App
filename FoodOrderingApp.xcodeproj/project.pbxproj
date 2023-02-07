@@ -21,7 +21,7 @@
 		0471934E28B6709500982DD6 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471934D28B6709500982DD6 /* OnboardingViewController.swift */; };
 		0471935428B6737100982DD6 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471935328B6737100982DD6 /* OnboardingSlide.swift */; };
 		0471935628B6769400982DD6 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471935528B6769400982DD6 /* OnboardingCollectionViewCell.swift */; };
-		048B737628D0E0EC00CD68BA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B737528D0E0EC00CD68BA /* Extensions.swift */; };
+		048B737628D0E0EC00CD68BA /* UIView+cornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B737528D0E0EC00CD68BA /* UIView+cornerRadius.swift */; };
 		04A7C48F28BE3972000BA889 /* DishListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A7C48D28BE3972000BA889 /* DishListTableViewCell.swift */; };
 		04A7C49028BE3972000BA889 /* DishListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A7C48E28BE3972000BA889 /* DishListTableViewCell.xib */; };
 		04A7C49328BE3D0E000BA889 /* DishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A7C49228BE3D0E000BA889 /* DishListViewController.swift */; };
@@ -34,8 +34,16 @@
 		04BBA72228BAAED500A20E2C /* PopularsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBA72028BAAED500A20E2C /* PopularsCollectionViewCell.swift */; };
 		04BBA72328BAAED500A20E2C /* PopularsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BBA72128BAAED500A20E2C /* PopularsCollectionViewCell.xib */; };
 		04BBA72528BAB04600A20E2C /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBA72428BAB04600A20E2C /* Dish.swift */; };
+		04D7BA2E299296E1009295B7 /* OrdersProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7BA2D299296E1009295B7 /* OrdersProtocol.swift */; };
+		04D7BA30299296E6009295B7 /* ListDishesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7BA2F299296E6009295B7 /* ListDishesProtocol.swift */; };
+		04D7BA3329929748009295B7 /* OrderRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7BA3229929748009295B7 /* OrderRepositories.swift */; };
+		04D7BA36299299EA009295B7 /* DishesRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7BA35299299EA009295B7 /* DishesRepositories.swift */; };
 		04DBA19628BB923700C4A015 /* DishLandscapeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DBA19428BB923700C4A015 /* DishLandscapeCollectionViewCell.swift */; };
 		04DBA19728BB923700C4A015 /* DishLandscapeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DBA19528BB923700C4A015 /* DishLandscapeCollectionViewCell.xib */; };
+		04E3873A2992B73900A6B3E5 /* PlaceOrderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E387392992B73900A6B3E5 /* PlaceOrderRepository.swift */; };
+		04E3873C2992B75F00A6B3E5 /* PlaceOrderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E3873B2992B75F00A6B3E5 /* PlaceOrderProtocol.swift */; };
+		04E3873E2992BA0000A6B3E5 /* FetchAllDishesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E3873D2992BA0000A6B3E5 /* FetchAllDishesProtocol.swift */; };
+		04E387412992BA4500A6B3E5 /* FetchAllDishesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E387402992BA4500A6B3E5 /* FetchAllDishesRepository.swift */; };
 		04FFBBD628C002A700E57B19 /* PlaceOrderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FFBBD528C002A700E57B19 /* PlaceOrderResponse.swift */; };
 		04FFBBD828C00B5D00E57B19 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FFBBD728C00B5D00E57B19 /* Route.swift */; };
 		56C7DFC70FA120E7610A576D /* Pods_FoodOrderingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A5F2CEB3F7CD314D14FF8F /* Pods_FoodOrderingApp.framework */; };
@@ -58,7 +66,7 @@
 		0471934D28B6709500982DD6 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		0471935328B6737100982DD6 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		0471935528B6769400982DD6 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
-		048B737528D0E0EC00CD68BA /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		048B737528D0E0EC00CD68BA /* UIView+cornerRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+cornerRadius.swift"; sourceTree = "<group>"; };
 		04A7C48D28BE3972000BA889 /* DishListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishListTableViewCell.swift; sourceTree = "<group>"; };
 		04A7C48E28BE3972000BA889 /* DishListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishListTableViewCell.xib; sourceTree = "<group>"; };
 		04A7C49228BE3D0E000BA889 /* DishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishListViewController.swift; sourceTree = "<group>"; };
@@ -71,8 +79,16 @@
 		04BBA72028BAAED500A20E2C /* PopularsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularsCollectionViewCell.swift; sourceTree = "<group>"; };
 		04BBA72128BAAED500A20E2C /* PopularsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularsCollectionViewCell.xib; sourceTree = "<group>"; };
 		04BBA72428BAB04600A20E2C /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		04D7BA2D299296E1009295B7 /* OrdersProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersProtocol.swift; sourceTree = "<group>"; };
+		04D7BA2F299296E6009295B7 /* ListDishesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDishesProtocol.swift; sourceTree = "<group>"; };
+		04D7BA3229929748009295B7 /* OrderRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRepositories.swift; sourceTree = "<group>"; };
+		04D7BA35299299EA009295B7 /* DishesRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesRepositories.swift; sourceTree = "<group>"; };
 		04DBA19428BB923700C4A015 /* DishLandscapeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishLandscapeCollectionViewCell.swift; sourceTree = "<group>"; };
 		04DBA19528BB923700C4A015 /* DishLandscapeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishLandscapeCollectionViewCell.xib; sourceTree = "<group>"; };
+		04E387392992B73900A6B3E5 /* PlaceOrderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderRepository.swift; sourceTree = "<group>"; };
+		04E3873B2992B75F00A6B3E5 /* PlaceOrderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderProtocol.swift; sourceTree = "<group>"; };
+		04E3873D2992BA0000A6B3E5 /* FetchAllDishesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAllDishesProtocol.swift; sourceTree = "<group>"; };
+		04E387402992BA4500A6B3E5 /* FetchAllDishesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAllDishesRepository.swift; sourceTree = "<group>"; };
 		04FFBBD528C002A700E57B19 /* PlaceOrderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderResponse.swift; sourceTree = "<group>"; };
 		04FFBBD728C00B5D00E57B19 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		7B48FBBE773C43D3B2178B3C /* Pods-FoodOrderingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodOrderingApp.debug.xcconfig"; path = "Target Support Files/Pods-FoodOrderingApp/Pods-FoodOrderingApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +127,7 @@
 		0465030B28BFAB7E0054C5DE /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				04D7BA272992943B009295B7 /* Repositories */,
 				0465030C28BFABA00054C5DE /* ApiServices.swift */,
 				04FFBBD728C00B5D00E57B19 /* Route.swift */,
 			);
@@ -138,6 +155,7 @@
 		0471933628B66AC500982DD6 /* FoodOrderingApp */ = {
 			isa = PBXGroup;
 			children = (
+				04D7BA2C299296C3009295B7 /* Protocols */,
 				048B737428D0E0CA00CD68BA /* Extension */,
 				0465030B28BFAB7E0054C5DE /* Networking */,
 				04BBA71528BA4A7900A20E2C /* CustomViews */,
@@ -192,7 +210,7 @@
 		048B737428D0E0CA00CD68BA /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				048B737528D0E0EC00CD68BA /* Extensions.swift */,
+				048B737528D0E0EC00CD68BA /* UIView+cornerRadius.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -276,6 +294,44 @@
 			path = PopularCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		04D7BA272992943B009295B7 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				04E3873F2992BA2400A6B3E5 /* FetchAllDishes */,
+				04E387382992B6F000A6B3E5 /* DishDetails */,
+				04D7BA34299299AB009295B7 /* ListDishes */,
+				04D7BA3129929732009295B7 /* Orders */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		04D7BA2C299296C3009295B7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				04D7BA2F299296E6009295B7 /* ListDishesProtocol.swift */,
+				04D7BA2D299296E1009295B7 /* OrdersProtocol.swift */,
+				04E3873B2992B75F00A6B3E5 /* PlaceOrderProtocol.swift */,
+				04E3873D2992BA0000A6B3E5 /* FetchAllDishesProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		04D7BA3129929732009295B7 /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				04D7BA3229929748009295B7 /* OrderRepositories.swift */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		04D7BA34299299AB009295B7 /* ListDishes */ = {
+			isa = PBXGroup;
+			children = (
+				04D7BA35299299EA009295B7 /* DishesRepositories.swift */,
+			);
+			path = ListDishes;
+			sourceTree = "<group>";
+		};
 		04DBA19328BB91FF00C4A015 /* DishLandscapeCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +339,22 @@
 				04DBA19528BB923700C4A015 /* DishLandscapeCollectionViewCell.xib */,
 			);
 			path = DishLandscapeCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		04E387382992B6F000A6B3E5 /* DishDetails */ = {
+			isa = PBXGroup;
+			children = (
+				04E387392992B73900A6B3E5 /* PlaceOrderRepository.swift */,
+			);
+			path = DishDetails;
+			sourceTree = "<group>";
+		};
+		04E3873F2992BA2400A6B3E5 /* FetchAllDishes */ = {
+			isa = PBXGroup;
+			children = (
+				04E387402992BA4500A6B3E5 /* FetchAllDishesRepository.swift */,
+			);
+			path = FetchAllDishes;
 			sourceTree = "<group>";
 		};
 		3ECD917BA476E810797AD76A /* Pods */ = {
@@ -422,6 +494,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04BBA71A28BA4AC300A20E2C /* CategoryCollectionViewCell.swift in Sources */,
+				04D7BA2E299296E1009295B7 /* OrdersProtocol.swift in Sources */,
 				0471935428B6737100982DD6 /* OnboardingSlide.swift in Sources */,
 				0465031328BFD4AE0054C5DE /* AllDishes.swift in Sources */,
 				0471933828B66AC500982DD6 /* AppDelegate.swift in Sources */,
@@ -434,16 +507,23 @@
 				04BBA72228BAAED500A20E2C /* PopularsCollectionViewCell.swift in Sources */,
 				04BBA72528BAB04600A20E2C /* Dish.swift in Sources */,
 				04251BDF28C23DFC00F2205F /* PlacedOrders.swift in Sources */,
+				04D7BA30299296E6009295B7 /* ListDishesProtocol.swift in Sources */,
 				04251BDD28C22E7500F2205F /* CategoriesDishes.swift in Sources */,
 				04FFBBD828C00B5D00E57B19 /* Route.swift in Sources */,
 				0471933A28B66AC500982DD6 /* SceneDelegate.swift in Sources */,
+				04E3873C2992B75F00A6B3E5 /* PlaceOrderProtocol.swift in Sources */,
 				04633DE728BBF71D00965308 /* DishDetailsViewController.swift in Sources */,
 				0440A20328B69CE900A9337F /* HomeViewController.swift in Sources */,
 				04FFBBD628C002A700E57B19 /* PlaceOrderResponse.swift in Sources */,
-				048B737628D0E0EC00CD68BA /* Extensions.swift in Sources */,
+				048B737628D0E0EC00CD68BA /* UIView+cornerRadius.swift in Sources */,
 				04A7C48F28BE3972000BA889 /* DishListTableViewCell.swift in Sources */,
+				04E3873E2992BA0000A6B3E5 /* FetchAllDishesProtocol.swift in Sources */,
 				04BBA71D28BA4CAD00A20E2C /* DishCategory.swift in Sources */,
 				0471935628B6769400982DD6 /* OnboardingCollectionViewCell.swift in Sources */,
+				04D7BA36299299EA009295B7 /* DishesRepositories.swift in Sources */,
+				04E387412992BA4500A6B3E5 /* FetchAllDishesRepository.swift in Sources */,
+				04E3873A2992B73900A6B3E5 /* PlaceOrderRepository.swift in Sources */,
+				04D7BA3329929748009295B7 /* OrderRepositories.swift in Sources */,
 				04DBA19628BB923700C4A015 /* DishLandscapeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -594,6 +674,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4XR27GH5NW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FoodOrderingApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -601,6 +682,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -622,6 +704,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4XR27GH5NW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FoodOrderingApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -629,6 +712,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

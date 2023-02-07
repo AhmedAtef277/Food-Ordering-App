@@ -10,12 +10,14 @@ import ProgressHUD
 
 class OrdersListViewController: UIViewController {
 
-    @IBOutlet weak var ordersTableView: UITableView!
+    @IBOutlet private weak var ordersTableView: UITableView!
     
-    var orderList : [Orders] = []
+    
+    private var orderList : [Orders] = []
+    private var orderServices : OrderRepositories!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        orderServices = OrderRepositories()
         register()
     }
     
@@ -31,7 +33,7 @@ class OrdersListViewController: UIViewController {
      }
     private func fetchOrders(){
         ProgressHUD.show()
-        ApiServices.shared.fetchOrders(url:  "\(Route.baseUrl)/orders") { [weak self] orders, error in
+        orderServices.fetchOrders { [weak self] orders, error in
             self?.orderList = orders?.data ?? []
             ProgressHUD.dismiss()
             

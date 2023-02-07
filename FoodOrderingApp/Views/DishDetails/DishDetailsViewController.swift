@@ -14,22 +14,24 @@ class DishDetailsViewController: UIViewController {
     
     static let identifier = String(describing: DishDetailsViewController.self)
     
-    @IBOutlet weak var placeOrderOutlet: UIButton!
+    @IBOutlet private weak var placeOrderOutlet: UIButton!
     
     
-    @IBOutlet weak var dishImage: UIImageView!
-    @IBOutlet weak var dishTitle: UILabel!
+    @IBOutlet private weak var dishImage: UIImageView!
+    @IBOutlet private weak var dishTitle: UILabel!
     
-    @IBOutlet weak var dishCalories: UILabel!
+    @IBOutlet private weak var dishCalories: UILabel!
     
-    @IBOutlet weak var dishDescription: UILabel!
+    @IBOutlet private weak var dishDescription: UILabel!
     
-    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet private weak var nameField: UITextField!
     
     var dish : Dish!
+    var placeOrderServices : PlaceOrderRepository!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        placeOrderServices = PlaceOrderRepository()
         // Do any additional setup after loading the view.
     }
     
@@ -39,7 +41,7 @@ class DishDetailsViewController: UIViewController {
         dishCalories.text = "\(dish.calories) Calories"
         dishDescription.text = dish.description
     }
-    @IBAction func placeOrder(_ sender: UIButton) {
+    @IBAction private func placeOrder(_ sender: UIButton) {
         guard let name = nameField.text?.trimmingCharacters(in: .whitespaces) , !name.isEmpty else{
             ProgressHUD.showError("It is not available name")
             return
@@ -50,13 +52,9 @@ class DishDetailsViewController: UIViewController {
         
         
         
-        
-        
-        
-        
     }
     func placeOrder(){
-        ApiServices.shared.palceOrder(url: "\(Route.baseUrl)/orders/\(dish?.id ?? "")", name: nameField.text!) { data, error in
+        placeOrderServices.palceOrder(orderId: dish?.id ?? "" , name: nameField.text!) { data, error in
            // print("data is \(data)")
             if data?.status == 201{
                 ProgressHUD.showSucceed(data?.message)
