@@ -10,18 +10,23 @@ import ProgressHUD
 
 class HomeViewController: UIViewController {
     
-    static let identifier = String(describing: HomeViewController.self)
     
+    //MARK: - Outlets
     
     @IBOutlet private weak var categoryCollectionView: UICollectionView!
     @IBOutlet private weak var popularCollectionView: UICollectionView!
     @IBOutlet private weak var specialCollectionView: UICollectionView!
     
+    //MARK: - Variables
+
+    static let identifier = String(describing: HomeViewController.self)
     private var category : [DishCategory] = []
     private var popular : [Dish] = []
     private var special : [Dish] = []
-     var fetchAllDishesRepository : FetchAllDishesRepository!
+    var fetchAllDishesRepository : FetchAllDishesRepository!
     
+    //MARK: - Lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchAllDishesRepository = FetchAllDishesRepository()
@@ -32,6 +37,8 @@ class HomeViewController: UIViewController {
         fetchAllDishes()
     }
     
+    //MARK: - Functions
+
     private func fetchAllDishes(){
         fetchAllDishesRepository.getAllDishes {[weak self] data, error in
             if let error = error {
@@ -68,12 +75,11 @@ class HomeViewController: UIViewController {
         popularCollectionView.register(UINib(nibName: PopularsCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: PopularsCollectionViewCell.identifier)
         
         specialCollectionView.register(UINib(nibName: DishLandscapeCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: DishLandscapeCollectionViewCell.identifier)
-        
-        
-        
     }
     
 }
+
+//MARK: -DataSource
 
 extension HomeViewController : UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -122,6 +128,8 @@ extension HomeViewController : UICollectionViewDataSource{
     
 }
 
+// MARK: - Delegate
+
 extension HomeViewController : UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -146,18 +154,5 @@ extension HomeViewController : UICollectionViewDelegate {
             
         }
     }
-}
-
-extension UIViewController{
-    
-    var contents : UIViewController{
-        if let navcon = self as? UINavigationController{
-            return navcon.visibleViewController ?? self
-        }else{
-            return self
-        }
-        
-    }
-    
 }
 

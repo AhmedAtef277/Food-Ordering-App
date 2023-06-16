@@ -46,6 +46,7 @@
 		04E387412992BA4500A6B3E5 /* FetchAllDishesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E387402992BA4500A6B3E5 /* FetchAllDishesRepository.swift */; };
 		04FFBBD628C002A700E57B19 /* PlaceOrderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FFBBD528C002A700E57B19 /* PlaceOrderResponse.swift */; };
 		04FFBBD828C00B5D00E57B19 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FFBBD728C00B5D00E57B19 /* Route.swift */; };
+		4C0F2BE92A3C998A00B4E38D /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F2BE82A3C998A00B4E38D /* UIViewController + Extension.swift */; };
 		56C7DFC70FA120E7610A576D /* Pods_FoodOrderingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A5F2CEB3F7CD314D14FF8F /* Pods_FoodOrderingApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,7 @@
 		04E387402992BA4500A6B3E5 /* FetchAllDishesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAllDishesRepository.swift; sourceTree = "<group>"; };
 		04FFBBD528C002A700E57B19 /* PlaceOrderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderResponse.swift; sourceTree = "<group>"; };
 		04FFBBD728C00B5D00E57B19 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		4C0F2BE82A3C998A00B4E38D /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		7B48FBBE773C43D3B2178B3C /* Pods-FoodOrderingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodOrderingApp.debug.xcconfig"; path = "Target Support Files/Pods-FoodOrderingApp/Pods-FoodOrderingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D9A5F2CEB3F7CD314D14FF8F /* Pods_FoodOrderingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodOrderingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F4FD860B87FD8181D13B14 /* Pods-FoodOrderingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodOrderingApp.release.xcconfig"; path = "Target Support Files/Pods-FoodOrderingApp/Pods-FoodOrderingApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				048B737528D0E0EC00CD68BA /* UIView+cornerRadius.swift */,
+				4C0F2BE82A3C998A00B4E38D /* UIViewController + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 				04633DE728BBF71D00965308 /* DishDetailsViewController.swift in Sources */,
 				0440A20328B69CE900A9337F /* HomeViewController.swift in Sources */,
 				04FFBBD628C002A700E57B19 /* PlaceOrderResponse.swift in Sources */,
+				4C0F2BE92A3C998A00B4E38D /* UIViewController + Extension.swift in Sources */,
 				048B737628D0E0EC00CD68BA /* UIView+cornerRadius.swift in Sources */,
 				04A7C48F28BE3972000BA889 /* DishListTableViewCell.swift in Sources */,
 				04E3873E2992BA0000A6B3E5 /* FetchAllDishesProtocol.swift in Sources */,
